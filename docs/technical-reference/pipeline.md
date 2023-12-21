@@ -34,7 +34,7 @@ Now, let's examine the dataset that was generated. It's a [`CustomDataset`][dist
 
 ### Labeller
 
-Next, we move on to labelLing a dataset. Just as before, we need an `LLM` for our `Pipeline`. In this case we will use [`OpenAILLM`][distilabel.llm.openai.OpenAILLM] with `gpt-4`, and a `PreferenceTask`, [UltraFeedbackTask][distilabel.tasks.preference.ultrafeedback.UltraFeedbackTask] for instruction following.
+Next, we move on to labelling a dataset. Just as before, we need an `LLM` for our `Pipeline`. In this case we will use [`OpenAILLM`][distilabel.llm.openai.OpenAILLM] with `gpt-4`, and a `PreferenceTask`, [UltraFeedbackTask][distilabel.tasks.preference.ultrafeedback.UltraFeedbackTask] for instruction following.
 
 ```python
 --8<-- "docs/snippets/technical-reference/pipeline/pipeline_labeller_1.py"
@@ -100,7 +100,7 @@ The API reference can be found here: [pipeline][distilabel.pipeline.pipeline]
 
 ## Argilla integration
 
-The [CustomDataset][distilabel.dataset.CustomDataset] generated entirely by AI models may require some additional human processing. To facilitate human feedback, the dataset can be uploaded to [`Argilla`](https://github.com/argilla-io/argilla). This process involves logging into an [`Argilla`](https://docs.argilla.io/en/latest/getting_started/cheatsheet.html#connect-to-argilla) instance, converting the dataset to the required format using `CustomDataset.to_argilla()`, and subsequently using push_to_argilla on the resulting dataset:
+The [CustomDataset][distilabel.dataset.CustomDataset] generated entirely by AI models may require some additional human processing. To facilitate human feedback, the dataset can be uploaded to [`Argilla`](https://github.com/argilla-io/argilla). This process involves logging into an [`Argilla`](https://docs.argilla.io/en/latest/getting_started/cheatsheet.html#connect-to-argilla) instance, converting the dataset to the required format using `CustomDataset.to_argilla()`, and subsequently using `push_to_argilla` on the resulting dataset:
 
 ```python
 --8<-- "docs/snippets/technical-reference/pipeline/argilla.py"

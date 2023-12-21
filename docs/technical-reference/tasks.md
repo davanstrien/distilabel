@@ -14,10 +14,10 @@ The following tasks for text generation are implemented:
 
 ### TextGenerationTask
 
-This is the base class for *text generation*, and includes the following fields for guiding the generation process: `system_prompt`, which serves as the initial instruction or query given to the LLM, guiding it on what kind of information or output is expected. A list of `principles` to inject on the `system_prompt`, which by default correspond to those defiend in the UltraFeedback paper[^1], and lastly a distribution for these principles so the `LLM` can be directed towards the different principles with a more customized behaviour.
+This is the base class for *text generation*, and includes the following fields for guiding the generation process: `system_prompt`, which serves as the initial instruction or query given to the LLM, guiding it on what kind of information or output is expected. A list of `principles` to inject on the `system_prompt`, which by default correspond to those defined in the UltraFeedback paper[^1], and lastly a distribution for these principles so the `LLM` can be directed towards the different principles with a more customized behaviour.
 
 [^1]:
-    The principles can be found [here][distilabel.tasks.text_generation.principles] in the codebase. More information on the *Principle Sampling* can be found in the [UltraFeedfack repository](https://github.com/OpenBMB/UltraFeedback#principle-sampling).
+    The principles can be found [here][distilabel.tasks.text_generation.principles] in the codebase. More information on the *Principle Sampling* can be found in the [UltraFeedback repository](https://github.com/OpenBMB/UltraFeedback#principle-sampling).
 
 The following methods define a task:
 
@@ -35,7 +35,7 @@ For the API reference visit [TextGenerationTask][distilabel.tasks.text_generatio
 
 ### Llama2TextGenerationTask
 
-This class inherits from the `TextGenerationTask` and it's specially prepared to deal with prompts in the form of the *Llama2* model, so it should be the go to task for `LLMs` intented for text generation that were trained using this prompt format. The specific prompt formats can be found in the source code of the [Prompt][distilabel.tasks.prompt.Prompt] class.
+This class inherits from the `TextGenerationTask` and it's specially prepared to deal with prompts in the form of the *Llama 2* model, so it should be the go to task for `LLMs` intended for text generation that were trained using this prompt format. The specific prompt formats can be found in the source code of the [Prompt][distilabel.tasks.prompt.Prompt] class.
 
 ```python
 --8<-- "docs/snippets/technical-reference/tasks/generic_llama2_textgeneration.py"
@@ -132,7 +132,7 @@ For the API reference visit [UltraFeedbackTask][distilabel.tasks.preference.ultr
 
 #### JudgeLMTask
 
-The task specially designed to build the prompts following the UltraFeedback paper: [JudgeLM: Fine-tuned Large Language Models Are Scalable Judges](https://arxiv.org/pdf/2310.17631.pdf). This task is designed to evaluate the performance of AI assistants.
+The task specially designed to build the prompts following the JudgeLM paper: [JudgeLM: Fine-tuned Large Language Models Are Scalable Judges](https://arxiv.org/pdf/2310.17631.pdf). This task is designed to evaluate the performance of AI assistants.
 
 ```python
 --8<-- "docs/snippets/technical-reference/tasks/openai_judgelm.py"

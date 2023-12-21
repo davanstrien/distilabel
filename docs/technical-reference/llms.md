@@ -31,7 +31,7 @@ Let's briefly introduce the general parameters we may find[^1]:
 
 - `frequency_penalty` and `presence_penalty`:
 
-    The frequency penalty penalizes tokens that have already appeard in the generated text, limiting the possibility of those appearing again, and the `presence_penalty` penalizes regardless of hte frequency.
+    The frequency penalty penalizes tokens that have already appeared in the generated text, limiting the possibility of those appearing again, and the `presence_penalty` penalizes regardless of the frequency.
 
 - `prompt_format` and `prompt_formatting_fn`:
 

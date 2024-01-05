@@ -18,7 +18,6 @@ from distilabel.llm.huggingface.inference_endpoints import InferenceEndpointsLLM
 from distilabel.llm.huggingface.transformers import TransformersLLM
 from distilabel.llm.llama_cpp import LlamaCppLLM
 from distilabel.llm.openai import OpenAILLM
-from distilabel.llm.together import TogetherInferenceLLM
 from distilabel.llm.vllm import vLLM
 
 __all__ = [
@@ -30,7 +29,6 @@ __all__ = [
     "InferenceEndpointsLLM",
     "TransformersLLM",
     "LlamaCppLLM",
-    "TogetherInferenceLLM",
     "OpenAILLM",
     "vLLM",
 ]
